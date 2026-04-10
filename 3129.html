@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludhiana Water Complaint Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                💧 Ludhiana<span>Water</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#complaint">File Complaint</a>
+                <a href="#track">Track Status</a>
+                <a href="#track" class="btn-nav">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Ensure Clean Water for Ludhiana</h1>
+            <p>Report leaks, contamination, or low pressure issues instantly. We are committed to providing safe water to every household in the city.</p>
+            <a href="#complaint" class="btn-cta">Submit Complaint Now</a>
+        </div>
+    </section>
+
+    <!-- Security Notice -->
+    <section class="security-notice">
+        <div class="security-container">
+            <div class="security-item">
+                <span class="security-icon">🔒</span>
+                <div class="security-text">
+                    <strong>Secure Portal:</strong> Your data is protected with 256-bit SSL encryption
+                </div>
+            </div>
+            <div class="security-item">
+                <span class="security-icon">🛡️</span>
+                <div class="security-text">
+                    <strong>Government Certified:</strong> Official portal under Ludhiana Municipal Corporation
+                </div>
+            </div>
+            <div class="security-item">
+                <span class="security-icon">⚡</span>
+                <div class="security-text">
+                    <strong>Fast Response:</strong> Average resolution time of 2 hours for emergencies
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complaint Form Section -->
+    <section id="complaint" class="complaint-wrapper">
+        <div class="complaint-container">
+            <!-- Left Side Photo -->
+            <div class="side-photo left-photo">
+                <img src="https://mcludhiana.gov.in/images/wss_big_1.jpg" alt="Clean water infrastructure" loading="lazy">
+                <div class="photo-overlay">
+                    <h4>🏗️ Ludhiana Water Supply </h4>
+                    <p>State-of-the-art water treatment facilities</p>
+                </div>
+            </div>
+
+            <!-- Center Form -->
+            <div class="complaint-section">
+                <h2 class="section-title">📝 File a Water Complaint</h2>
+
+                <form action="#" method="POST">
+                    <!-- Personal Details -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">👤 Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">📞 Mobile Number</label>
+                            <input type="tel" id="contact" class="form-control" placeholder="Enter 10-digit mobile number" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" required>
+                            <small id="contact-error" class="error-message">Please enter exactly 10 digits</small>
+                        </div>
+                    </div>
+
+                    <!-- Location Details -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="area">🏠 Area / Locality</label>
+                            <select id="area" class="form-control" required>
+                                <option value="" disabled selected>Select your area</option>
+                                <option value="civil_lines">Civil Lines</option>
+                                <option value="focal_point">Focal Point</option>
+                                <option value="mohali_bypass">Mohali Bypass</option>
+                                <option value="dugri">Dugri</option>
+                                <option value="baba_farid">Baba Farid Nagar</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="street">🏘️ Street Name / House No.</label>
+                            <input type="text" id="street" class="form-control" placeholder="e.g. Street 12, House 45" required>
+                        </div>
+                    </div>
+
+                    <!-- Issue Details -->
+                    <div class="form-group">
+                        <label for="issue_type">⚠️ Type of Issue</label>
+                        <select id="issue_type" class="form-control" required>
+                            <option value="" disabled selected>Select Issue Type</option>
+                            <option value="leak">Water Leak / Pipe Burst</option>
+                            <option value="contamination">Contaminated / Dirty Water</option>
+                            <option value="low_pressure">Low Water Pressure</option>
+                            <option value="no_supply">No Water Supply</option>
+                            <option value="meter">Meter Reading Issue</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">💬 Description of Problem</label>
+                        <textarea id="description" class="form-control" placeholder="Please describe the issue in detail..." required></textarea>
+                    </div>
+
+                    <!-- Photo Upload -->
+                    <div class="form-group">
+                        <div class="file-upload" onclick="document.getElementById('photo').click()">
+                            <label>📸 Upload Photo (Optional)</label>
+                            <p>Click to select an image file</p>
+                            <input type="file" id="photo" accept="image/*">   
+                            <div id="photo-name"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">🚀 Submit Complaint</button>
+                </form>
+            </div>
+
+          
+            <div class="side-photo right-photo">
+                <img src="https://img.freepik.com/free-vector/save-water_98292-7315.jpg?w=360" alt="Water quality testing" loading="lazy">
+                <div class="photo-overlay">
+                    <h4>🔬 Quality Assurance</h4>
+                    <p>Regular testing ensures safe drinking water</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="info-section">
+           
+        <div class="info-card">
+            <div class="card-icon">⚡</div>
+            <h3>24/7 Emergency Helpline</h3>
+            <p>For immediate water emergencies, call our round-the-clock support team.</p>
+            <p class="contact-number">📞 1800-123-4567</p>
+            <div class="response-time">Avg. Response: <strong>2 hours</strong></div>
+        </div>
+        <div class="info-card">
+            <div class="card-icon">🏛️</div>
+            <h3>Official Service Centers</h3>
+            <p>Visit our authorized municipal offices for billing queries and meter repairs.</p>
+            <p class="office-address">🏢 Civil Lines, Ludhiana - 141001</p>
+            <div class="working-hours">Mon-Sat: 9AM-6PM</div>
+        </div>
+        <div class="info-card">
+            <div class="card-icon">📧</div>
+            <h3>Digital Support</h3>
+            <p>Send detailed complaints or documents via our secure email system.</p>
+            <p class="email-address">📧 support@ludhianawater.gov.in</p>
+            <div class="response-time">Response within 24 hours</div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+<footer>
+            <div class="footer-bottom">
+                <div class="certifications">
+                    <span class="cert-badge">🔒 ISO 27001 Certified</span>
+                    <span class="cert-badge">🛡️ Government Portal</span>
+                    <span class="cert-badge">📋 RTI Compliant</span>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2024 Ludhiana Water Portal. All rights reserved.</p>
+                    <p>Made with ❤️ for Ludhiana Citizens | Last updated: March 2024</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="WhatsApp">💬</a>
+                </div>
+            </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

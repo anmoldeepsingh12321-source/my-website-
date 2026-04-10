@@ -1,0 +1,11 @@
+{
+  "port": 3000,
+  "host": "0.0.0.0",
+  "appName": "Ludhiana Waters",
+  "version": "1.0.0",
+  "environment": "development",
+  "staticFiles": {
+    "enabled": true,
+    "directory": "."
+  }
+}
